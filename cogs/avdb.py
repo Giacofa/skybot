@@ -24,7 +24,7 @@ class avdbCommands(commands.Cog):
                 data = json.load(f)
                 f.close()
             for a in data:
-                if a['designator'] == acft:
+                if a['designator'].upper() == acft.upper():
                     found = True
                     acftdata = a
             
