@@ -20,13 +20,23 @@ class avdbCommands(commands.Cog):
     async def acft_command(self, ctx, acft = None):
         if not acft == None:
             found = False
-            with open('lib/avdata.json', 'r') as f:
-                data = json.load(f)
-                f.close()
-            for a in data:
-                if a['designator'].upper() == acft.upper():
-                    found = True
-                    acftdata = a
+            # Giacomo easter egg
+            if acft.upper() == 'GIACOMO':
+                try:
+                    with open('lib/giacomodata.json', 'r') as g:
+                        found = True
+                        acftdata = json.load(g)
+                except FileNotFoundError:
+                    pass
+
+            if not found:
+                with open('lib/avdata.json', 'r') as f:
+                    data = json.load(f)
+                    f.close()
+                for a in data:
+                    if a['designator'].upper() == acft.upper():
+                        found = True
+                        acftdata = a
             
             if found == True:
                 embed = discord.Embed(color=discord.Color.blue())

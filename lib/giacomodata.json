@@ -1,0 +1,13 @@
+{
+"img_url" : "https://media-exp1.licdn.com/dms/image/C4D03AQEDEjJHfXYqbQ/profile-displayphoto-shrink_200_200/0?e:1607558400&v:beta&t:Fu-UgVs8j0VOhhv4y3XnKD5DgkB4ESYAVvWRvS1uMNQ",
+"designator" : "GS93",
+"name" : "Giacomo by Simongini family",
+"wtc" : "M",
+"apc" : "D",
+"cruise" : {
+      "ceiling" : "12000 ft",
+      "ROC" : "300 ft/min",
+      "TAS" : "11 kn",
+      "mach" : "0.015",
+      }
+}
